@@ -9,6 +9,8 @@ public class CameraRenderer : MonoBehaviour
 
     const string bufferName = "Render Camera";
 
+    static ShaderTagId unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit");
+
     CommandBuffer buffer = new CommandBuffer
     {
         name = bufferName
@@ -54,6 +56,13 @@ public class CameraRenderer : MonoBehaviour
 
     void DrawVisibleGeometry ()
     {
+        var sortingSettings = new SortingSettings(camera) {
+        criteria = SortingCriteria.CommonOpaque };
+        var drawingSettings = new DrawingSettings(unlitShaderTagId, sortingSettings);
+        var filteringSettings = new FilteringSettings(RenderQueueRange.all);
+
+        context.DrawRenderers(cullingResults, ref drawingSettings, ref filteringSettings);
+
         context.DrawSkybox(camera);
     }
 
