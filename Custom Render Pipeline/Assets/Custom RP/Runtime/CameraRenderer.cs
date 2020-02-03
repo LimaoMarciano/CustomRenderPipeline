@@ -56,14 +56,24 @@ public class CameraRenderer : MonoBehaviour
 
     void DrawVisibleGeometry ()
     {
+        //Draws opaque
         var sortingSettings = new SortingSettings(camera) {
         criteria = SortingCriteria.CommonOpaque };
         var drawingSettings = new DrawingSettings(unlitShaderTagId, sortingSettings);
-        var filteringSettings = new FilteringSettings(RenderQueueRange.all);
+        var filteringSettings = new FilteringSettings(RenderQueueRange.opaque);
 
         context.DrawRenderers(cullingResults, ref drawingSettings, ref filteringSettings);
 
+        //Draws skybox
         context.DrawSkybox(camera);
+
+        //Draws transparent
+        sortingSettings.criteria = SortingCriteria.CommonTransparent;
+        drawingSettings.sortingSettings = sortingSettings;
+        filteringSettings.renderQueueRange = RenderQueueRange.transparent;
+
+        context.DrawRenderers(cullingResults, ref drawingSettings, ref filteringSettings);
+
     }
 
     bool Cull ()
