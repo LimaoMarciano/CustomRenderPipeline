@@ -7,6 +7,13 @@ public class CameraRenderer : MonoBehaviour
 
     Camera camera;
 
+    const string bufferName = "Render Camera";
+
+    CommandBuffer buffer = new CommandBuffer
+    {
+        name = bufferName
+    };
+
     public void Render (ScriptableRenderContext context, Camera camera)
     {
         this.context = context;
@@ -19,12 +26,22 @@ public class CameraRenderer : MonoBehaviour
 
     void Setup ()
     {
+        buffer.BeginSample(bufferName);
+        ExecuteBuffer();
         context.SetupCameraProperties(camera);
     }
 
     void Submit ()
     {
+        buffer.EndSample(bufferName);
+        ExecuteBuffer();
         context.Submit();
+    }
+
+    void ExecuteBuffer ()
+    {
+        context.ExecuteCommandBuffer(buffer);
+        buffer.Clear();
     }
 
     void DrawVisibleGeometry ()
