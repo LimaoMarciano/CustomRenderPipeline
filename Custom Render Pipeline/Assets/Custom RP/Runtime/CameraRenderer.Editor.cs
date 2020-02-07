@@ -1,5 +1,6 @@
 ﻿using UnityEditor;
 using UnityEngine;
+using UnityEngine.Profiling;
 using UnityEngine.Rendering;
 
 partial class CameraRenderer
@@ -12,6 +13,8 @@ partial class CameraRenderer
     partial void DrawUnsupportedShaders();
 
     partial void PrepareBuffer();
+
+    string SampleName { get; set; }
 
 
 #if UNITY_EDITOR
@@ -70,8 +73,14 @@ partial class CameraRenderer
 
     partial void PrepareBuffer()
     {
-        buffer.name = camera.name;
+        Profiler.BeginSample("Editor Only");
+        buffer.name = SampleName = camera.name;
+        Profiler.EndSample();
     }
+
+#else
+
+    const string SampleName = bufferName;
 
 #endif
 

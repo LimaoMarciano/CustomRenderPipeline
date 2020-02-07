@@ -865,7 +865,6 @@ GameObject:
   m_Component:
   - component: {fileID: 760516248}
   - component: {fileID: 760516247}
-  - component: {fileID: 760516246}
   m_Layer: 0
   m_Name: Secundary Camera
   m_TagString: Untagged
@@ -873,14 +872,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &760516246
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 760516245}
-  m_Enabled: 1
 --- !u!20 &760516247
 Camera:
   m_ObjectHideFlags: 0
