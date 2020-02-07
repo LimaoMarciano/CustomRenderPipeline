@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 244000315}
   - component: {fileID: 244000314}
   - component: {fileID: 244000313}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube Standard (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 331354957}
   - component: {fileID: 331354956}
   - component: {fileID: 331354955}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere StandardTransparent (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 503162594}
   - component: {fileID: 503162593}
   - component: {fileID: 503162592}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere StandardTransparent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 549136993}
   - component: {fileID: 549136992}
   - component: {fileID: 549136991}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere StandardTransparent (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 563638170}
   - component: {fileID: 563638169}
   - component: {fileID: 563638168}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube Standard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 660170399}
   - component: {fileID: 660170398}
   - component: {fileID: 660170397}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube Standard (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,7 +903,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1078,7 +1078,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 51
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1116,7 +1116,7 @@ GameObject:
   - component: {fileID: 1093059265}
   - component: {fileID: 1093059264}
   - component: {fileID: 1093059263}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere StandardTransparent (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1602,7 +1602,7 @@ GameObject:
   - component: {fileID: 1246239803}
   - component: {fileID: 1246239802}
   - component: {fileID: 1246239801}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube Standard (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
