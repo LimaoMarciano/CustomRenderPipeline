@@ -11,6 +11,8 @@ partial class CameraRenderer
 
     partial void DrawUnsupportedShaders();
 
+    partial void PrepareBuffer();
+
 
 #if UNITY_EDITOR
 
@@ -34,6 +36,9 @@ partial class CameraRenderer
         }
     }
 
+    /// <summary>
+    /// Send UI world geometry to scene view
+    /// </summary>
     partial void PrepareForSceneWindow()
     {
         if (camera.cameraType == CameraType.SceneView)
@@ -61,6 +66,11 @@ partial class CameraRenderer
         var filteringSettings = FilteringSettings.defaultValue;
 
         context.DrawRenderers(cullingResults, ref drawingSettings, ref filteringSettings);
+    }
+
+    partial void PrepareBuffer()
+    {
+        buffer.name = camera.name;
     }
 
 #endif
