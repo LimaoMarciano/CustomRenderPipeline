@@ -7,7 +7,10 @@ partial class CameraRenderer
 
     partial void DrawGizmos();
 
+    partial void PrepareForSceneWindow();
+
     partial void DrawUnsupportedShaders();
+
 
 #if UNITY_EDITOR
 
@@ -28,6 +31,14 @@ partial class CameraRenderer
         {
             context.DrawGizmos(camera, GizmoSubset.PreImageEffects);
             context.DrawGizmos(camera, GizmoSubset.PostImageEffects);
+        }
+    }
+
+    partial void PrepareForSceneWindow()
+    {
+        if (camera.cameraType == CameraType.SceneView)
+        {
+            ScriptableRenderContext.EmitWorldGeometryForSceneView(camera);
         }
     }
 
