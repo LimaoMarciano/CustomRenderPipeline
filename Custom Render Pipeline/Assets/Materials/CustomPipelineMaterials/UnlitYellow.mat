@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: UnlitYellow
   m_Shader: {fileID: 4800000, guid: ba6579194b667914da66dcc9d06c0ffc, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _CLIPPING
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -61,8 +61,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
-    - _Clipping: 0
-    - _Cutoff: 0.144
+    - _Clipping: 1
+    - _Cutoff: 0.2
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
